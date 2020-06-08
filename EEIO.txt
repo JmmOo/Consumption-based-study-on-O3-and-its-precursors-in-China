@@ -1,0 +1,87 @@
+
+%MRIO-GTAP-NMVOCs%
+ChGt2012A=zeros(8823,8823);
+for i=1:8823
+   for j=1:8823
+   ChGt2012A(i,j)=ChGt2012Z(i,j)./ChGt2012X(j,1);
+end
+end
+
+for i=1:8823
+   for j=1:8823
+   hVOC(1,j)=VOC_GTAP57c(j,1)/ChGt2012X(j,1);   %%%direct emission intensity vector%%%%
+end
+end
+
+ChGt2012A(isnan(ChGt2012A))=0;
+ChGt2012A(~isfinite(ChGt2012A))=0;
+
+hVOC(isnan(hVOC))=0;
+hVOC(~isfinite(hVOC))=0;
+
+
+L=pinv(diag(ones(8823,1))-ChGt2012A);
+
+%%%%EEIO calcualtion to get the consumption-based emissions%%%%%
+flowVOC_2=diag(hVOC)*L*ChGt2012F;
+
+xlswrite('flowVOC_2.xlsx',flowVOC_2);
+
+
+
+%MRIO-GTAP-NOX%
+ChGt2012A=zeros(8823,8823);
+for i=1:8823
+   for j=1:8823
+   ChGt2012A(i,j)=ChGt2012Z(i,j)./ChGt2012X(j,1);
+end
+end
+
+for i=1:8823
+   for j=1:8823
+   hNOX(1,j)=NOX_GTAP57c(j,1)/ChGt2012X(j,1);  %%%direct emission intensity vector%%%%
+end
+end
+
+ChGt2012A(isnan(ChGt2012A))=0;
+ChGt2012A(~isfinite(ChGt2012A))=0;
+
+hNOX(isnan(hNOX))=0;
+hNOX(~isfinite(hNOX))=0;
+
+
+L=pinv(diag(ones(8823,1))-ChGt2012A);
+
+%%%%EEIO calcualtion to get the consumption-based emissions%%%%%
+flowNOX_2=diag(hNOX)*L*ChGt2012F;
+
+xlswrite('flowNOX_2.xlsx',flowNOX_2);
+
+
+
+%MRIO-GTAP%
+ChGt2012A=zeros(8823,8823);
+for i=1:8823
+   for j=1:8823
+   ChGt2012A(i,j)=ChGt2012Z(i,j)./ChGt2012X(j,1);   
+end
+end
+
+for i=1:8823
+   for j=1:8823
+   hCO(1,j)=CO_GTAP57c(j,1)/ChGt2012X(j,1);  %%%direct emission intensity vector%%%%
+end
+end
+
+ChGt2012A(isnan(ChGt2012A))=0;
+ChGt2012A(~isfinite(ChGt2012A))=0;
+
+hCO(isnan(hCO))=0;
+hCO(~isfinite(hCO))=0;
+
+%%%%EEIO calcualtion to get the consumption-based emissions%%%%%
+flowCO_2=diag(hCO)*L*ChGt2012F; 
+
+xlswrite('flowCO_2.xlsx',flowCO_2);
+
+

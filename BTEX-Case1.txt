@@ -1,0 +1,181 @@
+
+
+%%%%%%%%%%%%%%%%%%%%%%  Benezne-CSDdeath   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+diff_BEN_case1_01=base_01_BEN-case1_01_BEN;
+
+CSD_BEN_Death_case1_01_P=zeros(15321,1);
+CSD_BEN_Death_case1_01_N=zeros(15321,1);
+
+for i=1:15321
+  if diff_BEN_case1_01(i)>0
+      CSD_BEN_Death_case1_01_P(i)=ppl(i)*CSD(i)/1000*(0.058/1.4)*diff_BEN_case1_01(i)*3.2*1000;
+  else
+      CSD_BEN_Death_case1_01_N(i)=ppl(i)*CSD(i)/1000*(0.058/1.4)*diff_BEN_case1_01(i)*3.2*1000;
+end
+end
+
+
+diff_BEN_case1_04=base_04_BEN-case1_04_BEN;
+
+CSD_BEN_Death_case1_04_P=zeros(15321,1);
+CSD_BEN_Death_case1_04_N=zeros(15321,1);
+
+for i=1:15321
+  if diff_BEN_case1_04(i)>0
+      CSD_BEN_Death_case1_04_P(i)=ppl(i)*CSD(i)/1000*(0.058/1.4)*diff_BEN_case1_04(i)*3.2*1000;
+  else
+      CSD_BEN_Death_case1_04_N(i)=ppl(i)*CSD(i)/1000*(0.058/1.4)*diff_BEN_case1_04(i)*3.2*1000;
+end
+end
+diff_BEN_case1_07=base_07_BEN-case1_07_BEN;
+
+CSD_BEN_Death_case1_07_P=zeros(15321,1);
+CSD_BEN_Death_case1_07_N=zeros(15321,1);
+
+for i=1:15321
+  if diff_BEN_case1_07(i)>0
+      CSD_BEN_Death_case1_07_P(i)=ppl(i)*CSD(i)/1000*(0.058/1.4)*diff_BEN_case1_07(i)*3.2*1000;
+  else
+      CSD_BEN_Death_case1_07_N(i)=ppl(i)*CSD(i)/1000*(0.058/1.4)*diff_BEN_case1_07(i)*3.2*1000;
+end
+end
+
+
+
+diff_BEN_case1_10=base_10_BEN-case1_10_BEN;
+
+CSD_BEN_Death_case1_10_P=zeros(15321,1);
+CSD_BEN_Death_case1_10_N=zeros(15321,1);
+
+for i=1:15321
+  if diff_BEN_case1_10(i)>0
+      CSD_BEN_Death_case1_10_P(i)=ppl(i)*CSD(i)/1000*(0.058/1.4)*diff_BEN_case1_10(i)*3.2*1000;
+  else
+      CSD_BEN_Death_case1_10_N(i)=ppl(i)*CSD(i)/1000*(0.058/1.4)*diff_BEN_case1_10(i)*3.2*1000;
+end
+end
+
+%%%%%%%%%%%%%%%%%%%%%%%% to sum results  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Case1_CSD_BEN_Death=[sum(CSD_BEN_Death_case1_01_P)+sum(CSD_BEN_Death_case1_01_N);sum(CSD_BEN_Death_case1_04_P)+sum(CSD_BEN_Death_case1_04_N);sum(CSD_BEN_Death_case1_07_P)+sum(CSD_BEN_Death_case1_07_N);sum(CSD_BEN_Death_case1_10_P)+sum(CSD_BEN_Death_case1_10_N)];
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%  Xylene-CSDdeath   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+diff_XYL_case1_01=base_01_XYL-case1_01_XYL;
+
+CSD_XYL_Death_case1_01_P=zeros(15321,1);
+CSD_XYL_Death_case1_01_N=zeros(15321,1);
+
+for i=1:15321
+  if diff_XYL_case1_01(i)>0
+      CSD_XYL_Death_case1_01_P(i)=ppl(i)*CSD(i)/1000*(0.035/7.9)*diff_XYL_case1_01(i)*4.35*1000;
+  else
+      CSD_XYL_Death_case1_01_N(i)=ppl(i)*CSD(i)/1000*(0.035/7.9)*diff_XYL_case1_01(i)*4.35*1000;
+end
+end
+
+
+diff_XYL_case1_04=base_04_XYL-case1_04_XYL;
+
+CSD_XYL_Death_case1_04_P=zeros(15321,1);
+CSD_XYL_Death_case1_04_N=zeros(15321,1);
+
+for i=1:15321
+  if diff_XYL_case1_04(i)>0
+      CSD_XYL_Death_case1_04_P(i)=ppl(i)*CSD(i)/1000*(0.035/7.9)*diff_XYL_case1_04(i)*4.35*1000;
+  else
+      CSD_XYL_Death_case1_04_N(i)=ppl(i)*CSD(i)/1000*(0.035/7.9)*diff_XYL_case1_04(i)*4.35*1000;
+end
+end
+diff_XYL_case1_07=base_07_XYL-case1_07_XYL;
+
+CSD_XYL_Death_case1_07_P=zeros(15321,1);
+CSD_XYL_Death_case1_07_N=zeros(15321,1);
+
+for i=1:15321
+  if diff_XYL_case1_07(i)>0
+      CSD_XYL_Death_case1_07_P(i)=ppl(i)*CSD(i)/1000*(0.035/7.9)*diff_XYL_case1_07(i)*4.35*1000;
+  else
+      CSD_XYL_Death_case1_07_N(i)=ppl(i)*CSD(i)/1000*(0.035/7.9)*diff_XYL_case1_07(i)*4.35*1000;
+end
+end
+
+
+diff_XYL_case1_10=base_10_XYL-case1_10_XYL;
+
+CSD_XYL_Death_case1_10_P=zeros(15321,1);
+CSD_XYL_Death_case1_10_N=zeros(15321,1);
+
+for i=1:15321
+  if diff_XYL_case1_10(i)>0
+      CSD_XYL_Death_case1_10_P(i)=ppl(i)*CSD(i)/1000*(0.035/7.9)*diff_XYL_case1_10(i)*4.35*1000;
+  else
+      CSD_XYL_Death_case1_10_N(i)=ppl(i)*CSD(i)/1000*(0.035/7.9)*diff_XYL_case1_10(i)*4.35*1000;
+end
+end
+
+
+%%%%%%%%%%%%%%%%%%%%%%%% to sum results  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Case1_CSD_XYL_Death=[sum(CSD_XYL_Death_case1_01_P)+sum(CSD_XYL_Death_case1_01_N);sum(CSD_XYL_Death_case1_04_P)+sum(CSD_XYL_Death_case1_04_N);sum(CSD_XYL_Death_case1_07_P)+sum(CSD_XYL_Death_case1_07_N);sum(CSD_XYL_Death_case1_10_P)+sum(CSD_XYL_Death_case1_10_N)];
+
+
+%%%%%%%%%%%%%%%%%%%%%%  TOLene-CSDdeath   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+diff_TOL_case1_01=base_01_TOL-case1_01_TOL;
+
+CSD_TOL_Death_case1_01_P=zeros(15321,1);
+CSD_TOL_Death_case1_01_N=zeros(15321,1);
+
+for i=1:15321
+  if diff_TOL_case1_01(i)>0
+      CSD_TOL_Death_case1_01_P(i)=ppl(i)*CSD(i)/1000*(0.035/7.9)*diff_TOL_case1_01(i)*3.77*1000;
+  else
+      CSD_TOL_Death_case1_01_N(i)=ppl(i)*CSD(i)/1000*(0.035/7.9)*diff_TOL_case1_01(i)*3.77*1000;
+end
+end
+
+
+diff_TOL_case1_04=base_04_TOL-case1_04_TOL;
+
+CSD_TOL_Death_case1_04_P=zeros(15321,1);
+CSD_TOL_Death_case1_04_N=zeros(15321,1);
+
+for i=1:15321
+  if diff_TOL_case1_04(i)>0
+      CSD_TOL_Death_case1_04_P(i)=ppl(i)*CSD(i)/1000*(0.035/7.9)*diff_TOL_case1_04(i)*3.77*1000;
+  else
+      CSD_TOL_Death_case1_04_N(i)=ppl(i)*CSD(i)/1000*(0.035/7.9)*diff_TOL_case1_04(i)*3.77*1000;
+end
+end
+diff_TOL_case1_07=base_07_TOL-case1_07_TOL;
+
+CSD_TOL_Death_case1_07_P=zeros(15321,1);
+CSD_TOL_Death_case1_07_N=zeros(15321,1);
+
+for i=1:15321
+  if diff_TOL_case1_07(i)>0
+      CSD_TOL_Death_case1_07_P(i)=ppl(i)*CSD(i)/1000*(0.035/7.9)*diff_TOL_case1_07(i)*3.77*1000;
+  else
+      CSD_TOL_Death_case1_07_N(i)=ppl(i)*CSD(i)/1000*(0.035/7.9)*diff_TOL_case1_07(i)*3.77*1000;
+end
+end
+
+diff_TOL_case1_10=base_10_TOL-case1_10_TOL;
+
+CSD_TOL_Death_case1_10_P=zeros(15321,1);
+CSD_TOL_Death_case1_10_N=zeros(15321,1);
+
+for i=1:15321
+  if diff_TOL_case1_10(i)>0
+      CSD_TOL_Death_case1_10_P(i)=ppl(i)*CSD(i)/1000*(0.035/7.9)*diff_TOL_case1_10(i)*3.77*1000;
+  else
+      CSD_TOL_Death_case1_10_N(i)=ppl(i)*CSD(i)/1000*(0.035/7.9)*diff_TOL_case1_10(i)*3.77*1000;
+end
+end
+
+%%%%%%%%%%%%%%%%%%%%%%%% to sum results  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Case1_CSD_TOL_Death=[sum(CSD_TOL_Death_case1_01_P)+sum(CSD_TOL_Death_case1_01_N);sum(CSD_TOL_Death_case1_04_P)+sum(CSD_TOL_Death_case1_04_N);sum(CSD_TOL_Death_case1_07_P)+sum(CSD_TOL_Death_case1_07_N);sum(CSD_TOL_Death_case1_10_P)+sum(CSD_TOL_Death_case1_10_N)];
+
+
